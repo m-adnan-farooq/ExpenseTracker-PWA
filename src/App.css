@@ -1,0 +1,12 @@
+.navbar {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navlinks {
+  background-color: bisque;
+  padding: 5px;
+  width: 15vw;
+  border: none;
+}
