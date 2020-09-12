@@ -1,7 +1,24 @@
 import React from 'react';
+import transactionData from './TransactionData';
 
-export const History = () => {
+export const History = (transactionState:React.ComponentState) => {
     return (
-        <h1>This is History</h1>
+        <div>
+            <h1>Your Transaction History:</h1>
+            {transactionData.map((val, index)=>{
+               return(
+                   <div>
+                        {Object.keys(val)}
+                        <br></br>
+                        {Object.values(val)}
+                   </div>
+                       
+               ) 
+                
+            })}
+
+            
+    
+        </div>
     )
 }

@@ -1,9 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+// import logo from './logo.svg';
 import './App.css';
 // import {Main} from "./components/Main";
 import {BrowserRouter as Router, Routes, Route, Link, Outlet, useParams} from 'react-router-dom';
-import {History} from "./components/History"
+import {History} from "./components/History";
+import {NewTransaction} from "./components/NewTransaction";
+
+
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
 }
 
 export const Main = () => {
+
+  const transactionState:React.ComponentState = useState([{}]);  
+
   return (
       <div className="main">
           <Router>
@@ -21,12 +27,13 @@ export const Main = () => {
                   <Link to = 'categories' className = "navlinks">View categories</Link>
                   <Link to = 'newtransaction'className = "navlinks">New transaction</Link>
               </div>
+              <br></br>
               <Routes>
-                  <Route path = 'history' element = {<History></History>}/>
-                  <Route path = '/' element = {<Home></Home>}/>
+                  <Route path = 'newtransaction'><NewTransaction {...transactionState}/></Route>
+                  <Route path = 'history'><History {...transactionState}/></Route>
+                  <Route path = '/'><Home {...transactionState}/></Route>
               </Routes>
           </Router>
-
       </div>
   )
 }
