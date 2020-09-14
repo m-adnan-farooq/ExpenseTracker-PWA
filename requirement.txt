@@ -1,0 +1,13 @@
+category input from user (only miscellaneous category appears by default)
+drop down display of categories
+Description (input) regarding income / expense
+linking each description with category (mandatory)
+Drop down - income / expense selection
+UI/UX
+View (all or category wise) alongwith totals / net
+View - 10 items at a time
+Show balance on welcome screen
+Display alert/ warning when expense goes above income
+Editing of previously entered transaction
+Deleting of previously entered transaction
+connection with MongoDB
